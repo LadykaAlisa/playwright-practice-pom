@@ -52,9 +52,14 @@ export class GaragePage {
     }
 
     async login() {
+        await this.page.goto('https://qauto.forstudy.space/panel/garage');
+    }
+
+    async loginAsUser() {
         const signInForm = new SignInForm(this.page);
         await signInForm.open();
         await signInForm.loginWithCredentials(loginEmail, loginPassword);
+        await expect(this.page.locator('h1')).toHaveText('Garage');
     }
 
     async deleteNewUser() {

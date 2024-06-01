@@ -3,6 +3,8 @@ import { test } from '../fixtures/fixturesGarage';
 
 test.describe('Garage Page', () => {
 
+  test.use({storageState:'userOneState.json'});
+
 test.describe('tests add and delete new car', () => {
 
   test('should open garage page', async ({garagePageAsUser}) => {
