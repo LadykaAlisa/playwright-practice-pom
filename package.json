@@ -5,6 +5,7 @@
   "scripts": {
     "test": "npx playwright test --project=chromium",
     "test : ui": "npx playwright test --ui",
+    "test : api": "npx playwright test --project= api-tests",
     "report": "npx playwright show-report"
   },
   "author": "",
