@@ -9,7 +9,7 @@ test(" Login with User1 and save state" , async ({ page }) => {
         await page.goto('/');
         await garagePage.loginAsUser();
         await page.context().storageState({
-            path: 'userOneState.json'
+            path: './test-data/states/userOneState.json'
         });
     })
 })
